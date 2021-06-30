@@ -1,6 +1,13 @@
 import React from 'react';
 
 function Menu({ items }) {
+
+    const [menuItem, setMenuItem] = React.useState('home');
+
+    const changeMenuItem = (item) => {
+        setMenuItem(item)
+    }
+
     return (
         <div className="menu">
             <ul className="menu__items">

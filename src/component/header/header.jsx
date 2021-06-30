@@ -9,7 +9,7 @@ import BasketButton from './basketButton';
 
 
 const menuItems = [
-    { name: 'Главная', link: 'home' },
+    { name: 'Главная', link: '/' },
     { name: 'Друзья', link: 'friends' },
     { name: 'О сервисе', link: 'service' },
     { name: 'Контакты', link: 'contacts' },
