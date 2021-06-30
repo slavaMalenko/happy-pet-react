@@ -5,6 +5,8 @@
 .basket {
     display: flex;
     align-items: center;
+    text-decoration: none;
+    outline: $outlineLink;
 
     &__link-img {
         height: 50px;
@@ -16,8 +18,6 @@
     &__list {
         display: flex;
         align-items: center;
-        text-decoration: none;
-        outline: $outlineLink;
 
         &-price {
             font-size: 20px;
