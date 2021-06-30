@@ -9,10 +9,10 @@ import BasketButton from './basketButton';
 
 
 const menuItems = [
-    'Главная',
-    'Друзья',
-    'О сервисе',
-    'Контакты'
+    { name: 'Главная', link: 'home' },
+    { name: 'Друзья', link: 'friends' },
+    { name: 'О сервисе', link: 'service' },
+    { name: 'Контакты', link: 'contacts' },
 ]
 
 function Header() {

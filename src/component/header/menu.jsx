@@ -10,7 +10,7 @@ function Menu({ items }) {
                     items.map((item, index) => {
                         return (
                             <li className="menu__item">
-                                <a className="menu__link" href="#">{item}</a>
+                                <a className="menu__link" href="#">{item.name}</a>
                             </li>
                         )
                     })
