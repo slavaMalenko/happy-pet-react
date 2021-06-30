@@ -1,0 +1,84 @@
+@import '../../variables';
+
+
+
+.animals {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.animal {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 15px;
+    margin-bottom: 30px;
+
+    &:hover &__img {
+        filter: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.25));
+    }
+
+    &__img {
+        transition: all .1s linear;
+        border-radius: 50px;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    &__info {
+        text-align: center;
+        margin-bottom: 10px;
+
+        &-name {
+            font-size: 28px;
+            line-height: 34px;
+            letter-spacing: -0.055em;
+        }
+
+        &-breed {
+            font-size: 13px;
+        }
+
+        &-age {
+            font-size: 13px;
+        }
+    }
+
+    &__price {
+        position: relative;
+        text-align: center;
+        width: 100%;
+        background: #E8E8E8;
+        box-shadow: inset 0px -2px 5px rgba(0, 0, 0, 0.25);
+        border-radius: 100px;   
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: 40%;
+            right: 5%;
+            width: 35px;
+            height: 38px;
+            transform: translate(0, -50%);
+            background: url(../../../assets/img/friends/lapka.png) no-repeat left 7px;
+            background-size: 100%;
+        }
+
+        &-button {
+            padding: 10px 22px;
+            background: linear-gradient(180deg, #FD4B4B 0%, #FE2E2E 100%);
+            border-radius: 105px;
+            border: 0;
+
+            font-family: Montserrat;
+            line-height: 18px;
+            letter-spacing: -0.055em;
+            color: $white;
+        }
+
+        &-value {
+            padding: 3px 0 5px;
+        }
+    }
+}
