@@ -1,0 +1,36 @@
+{
+    "friends": [
+        {
+            "id": 0,
+            "imageUrl": "https://disk.yandex.ru/client/disk?idApp=client&dialog=slider&idDialog=%2Fdisk%2Flera.png",
+            "name": "Лера",
+            "category": "cat",
+            "kind": "Саванна кошка",
+            "price": 420000
+        },
+        {
+            "id": 1,
+            "imageUrl": "https://disk.yandex.ru/client/disk?idApp=client&dialog=slider&idDialog=%2Fdisk%2Fgerda.png",
+            "name": "Герда",
+            "category": "dog",
+            "kind": "Корги",
+            "price": 55000
+        },
+        {
+            "id": 2,
+            "imageUrl": "https://disk.yandex.ru/client/disk?idApp=client&dialog=slider&idDialog=%2Fdisk%2Fgerda.png",
+            "name": "Лорд",
+            "category": "dog",
+            "kind": "Немецкая овчарка",
+            "price": 20000
+        },
+        {
+            "id": 3,
+            "imageUrl": "https://disk.yandex.ru/client/disk?idApp=client&dialog=slider&idDialog=%2Fdisk%2Falmaz.png",
+            "name": "Алмаз",
+            "category": "parrot",
+            "kind": "Волнистый попугай",
+            "price": 1800
+        }
+    ]
+}
