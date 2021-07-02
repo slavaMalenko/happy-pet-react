@@ -22,11 +22,12 @@
 
     &__item {
         &-link {
+            transition: all .2s linear;
             display: inline-block;
             outline: $outlineLink;
             padding: 11px 15px;
+            cursor: pointer;
 
-            text-decoration: none;
             color: $black;
 
             &--active {

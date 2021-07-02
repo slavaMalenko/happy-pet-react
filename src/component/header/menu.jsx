@@ -14,8 +14,7 @@ function Menu({ items }) {
         <div className="menu">
             <ul className="menu__items">
 
-                {
-                    items &&
+                {items &&
                     items.map((item, index) => {
                         return (
                             <li

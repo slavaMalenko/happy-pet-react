@@ -1,29 +1,40 @@
 import React from 'react';
+import classNames from 'classnames';
 
-function Categories() {
+const Categories = React.memo(({ items, activeItemCategories, onClickItem }) => {
     return (
         <ul className="categories__items">
             <li className="categories__item">
-                <a className="categories__item-link categories__item-link--active" href="#">Все</a>
+                <p className={classNames(
+                    'categories__item-link',
+                    { 'categories__item-link--active': activeItemCategories === null }
+                )}
+                    onClick={() => onClickItem(null)}>
+
+                    Все
+
+                </p>
             </li>
 
-            <li className="categories__item">
-                <a className="categories__item-link" href="#">Собаки</a>
-            </li>
+            {items &&
+                items.map((item, index) => {
+                    return (
+                        <li key={index} className="categories__item">
+                            <p className={classNames(
+                                'categories__item-link',
+                                { 'categories__item-link--active': activeItemCategories === item.category }
+                            )}
+                                onClick={() => onClickItem(item.category)}>
 
-            <li className="categories__item">
-                <a className="categories__item-link" href="#">Кошки</a>
-            </li>
+                                {item.name}
 
-            <li className="categories__item">
-                <a className="categories__item-link" href="#">Птицы</a>
-            </li>
-
-            <li className="categories__item">
-                <a className="categories__item-link" href="#">Рыбы</a>
-            </li>
-        </ul>
+                            </p>
+                        </li>
+                    )
+                })
+            }
+        </ul >
     )
-}
+})
 
 export default Categories;
