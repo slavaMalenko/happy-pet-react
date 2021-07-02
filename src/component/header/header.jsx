@@ -20,7 +20,7 @@ function Header() {
         <header className="header">
             <div className="container">
                 <div className="header__content">
-                    <a className="logo" href="#">
+                    <a className="logo" href="/">
                         <div className="logo__img">
                             <img className="logo__img-photo" src={logo} alt="" />
                         </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import animals from '../assets/img/animals.png';
 import dog from '../assets/img/top/dog.png';
@@ -12,7 +13,8 @@ function BaseHome() {
             <div className="description">
                 <h1 className="description__head">Твой новый друг <br /> с доставкой на дом</h1>
                 <p className="description__item">Онлайн-магазин породистых домашних животных подарит тебе нового друга в несколько кликов. Действуй!</p>
-                <a href="" className="description__button">Посмотреть друзей</a>
+                {/* <Link className="description__button" to="/friends" >Посмотреть друзей</Link> */}
+                <a href="/friends" className="description__button">Посмотреть друзей</a>
             </div>
 
             <div className="top">
@@ -34,7 +36,7 @@ function BaseHome() {
                     </li>
                 </ul>
             </div>
-        </section>
+        </section >
     )
 }
 
