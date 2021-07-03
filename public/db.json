@@ -6,8 +6,9 @@
             "name": "Лера",
             "category": "cat",
             "kind": "Саванна кошка",
-            "age": "11 месяцев",
-            "price": "420 000"
+            "age": 11,
+            "ageValue": "месяцев",
+            "price": 420000
         },
         {
             "id": 1,
@@ -15,8 +16,9 @@
             "name": "Герда",
             "category": "dog",
             "kind": "Корги",
-            "age": "8 месяцев",
-            "price": "55 000"
+            "age": 8,
+            "ageValue": "месяцев",
+            "price": 55000
         },
         {
             "id": 2,
@@ -24,26 +26,29 @@
             "name": "Лорд",
             "category": "dog",
             "kind": "Немецкая овчарка",
-            "age": "1 месяц",
-            "price": "20 000"
+            "age": 1,
+            "ageValue": "месяц",
+            "price": 20000
         },
         {
             "id": 3,
             "imageUrl": "https://i.postimg.cc/hJBwJdnZ/almaz.png",
             "name": "Алмаз",
-            "category": "parrot",
+            "category": "bird",
             "kind": "Волнистый попугай",
-            "age": "18 месяцев",
-            "price": "1 800"
+            "age": 18,
+            "ageValue": "месяцев",
+            "price": 1800
         },
         {
             "id": 4,
             "imageUrl": "https://i.postimg.cc/pLy6k2m5/gosha.png",
             "name": "Гоша",
-            "category": "parrot",
+            "category": "bird",
             "kind": "Cинелобый амазон",
-            "age": "7 месяцев",
-            "price": "30 000"
+            "age": 7,
+            "ageValue": "месяцев",
+            "price": 30000
         },
         {
             "id": 5,
@@ -51,8 +56,9 @@
             "name": "Алакай",
             "category": "dog",
             "kind": "Cибирский хаски",
-            "age": "23 месяца",
-            "price": "7 500"
+            "age": 23,
+            "ageValue": "месяца",
+            "price": 7500
         }
     ]
 }
