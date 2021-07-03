@@ -1,5 +1,6 @@
 const initialState = {
-    items: null
+    items: null,
+    isLoader: false
 }
 
 const animals = (state = initialState, action) => {
