@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import arrow from '../../assets/img/header/arrow.png';
 
-function Sort({ items, activeItemSort, onClickItem }) {
+const Sort = React.memo(({ items, activeItemSort, onClickItem }) => {
     const sortRef = React.useRef();
 
     const [visiblePopup, setVisiblePopup] = React.useState(false);
@@ -72,6 +72,6 @@ function Sort({ items, activeItemSort, onClickItem }) {
             </div>
         </div >
     )
-}
+})
 
 export default Sort;
