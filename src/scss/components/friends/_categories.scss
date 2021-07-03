@@ -56,7 +56,12 @@
         align-items: center;
         justify-content: space-between;
 
+        &-text {
+            cursor: pointer;
+        }
+
         &-img {
+            transition: all .1s linear;
             transform: rotate(0);
             width: 8px;
             height: 4px;

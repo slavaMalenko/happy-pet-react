@@ -5,7 +5,12 @@ import Sort from '../component/friends/Sort';
 import Categories from '../component/friends/Categories';
 import Animals from '../component/friends/Animals';
 
-import { setCategory } from '../redux/actions/filters';
+import { setCategory, setSortBy } from '../redux/actions/filters';
+
+const sort = [
+    { name: "возрасту", value: "age" },
+    { name: "цене", value: "price" },
+]
 
 const categories = [
     { name: "Собаки", category: "dog" },
@@ -18,27 +23,38 @@ function Friends() {
 
     const state = useSelector(({ filters }) => {
         return {
-            category: filters.category
+            category: filters.category,
+            sortBy: filters.sortBy
         }
     })
 
     const dispatch = useDispatch();
 
-    const onClickItem = React.useCallback(category => {
+    const onClickItemCategory = React.useCallback(category => {
         dispatch(setCategory(category))
     }, [])
+
+    const onClickItemSortBy = React.useCallback(sort => {
+        dispatch(setSortBy(sort))
+    }, [])
+
+
 
 
 
     return (
         <section className="friends">
             <div className="categories">
-                <Sort />
+                <Sort
+                    items={sort}
+                    activeItemSort={state.sortBy}
+                    onClickItem={onClickItemSortBy}
+                />
 
                 <Categories
                     items={categories}
                     activeItemCategories={state.category}
-                    onClickItem={onClickItem}
+                    onClickItem={onClickItemCategory}
                 />
             </div>
 

@@ -19,7 +19,7 @@ const Categories = React.memo(({ items, activeItemCategories, onClickItem }) => 
             {items &&
                 items.map((item, index) => {
                     return (
-                        <li key={index} className="categories__item">
+                        <li key={item.category} className="categories__item">
                             <p className={classNames(
                                 'categories__item-link',
                                 { 'categories__item-link--active': activeItemCategories === item.category }
