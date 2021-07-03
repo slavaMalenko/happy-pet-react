@@ -1,10 +1,5 @@
 import React from 'react';
 
-import lera from '../../assets/img/friends/lera.png';
-import gerda from '../../assets/img/friends/gerda.png';
-import lord from '../../assets/img/friends/lord.png';
-import almaz from '../../assets/img/friends/almaz.png';
-
 function Animals({ items }) {
     return (
         <div className="animals">
