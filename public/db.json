@@ -2,35 +2,57 @@
     "friends": [
         {
             "id": 0,
-            "imageUrl": "https://disk.yandex.ru/client/disk?idApp=client&dialog=slider&idDialog=%2Fdisk%2Flera.png",
+            "imageUrl": "https://i.postimg.cc/8k9DLnKH/lera.png",
             "name": "Лера",
             "category": "cat",
             "kind": "Саванна кошка",
-            "price": 420000
+            "age": "11 месяцев",
+            "price": "420 000"
         },
         {
             "id": 1,
-            "imageUrl": "https://disk.yandex.ru/client/disk?idApp=client&dialog=slider&idDialog=%2Fdisk%2Fgerda.png",
+            "imageUrl": "https://i.postimg.cc/kMpMf54W/gerda.png",
             "name": "Герда",
             "category": "dog",
             "kind": "Корги",
-            "price": 55000
+            "age": "8 месяцев",
+            "price": "55 000"
         },
         {
             "id": 2,
-            "imageUrl": "https://disk.yandex.ru/client/disk?idApp=client&dialog=slider&idDialog=%2Fdisk%2Fgerda.png",
+            "imageUrl": "https://i.postimg.cc/02Svndhq/lord.png",
             "name": "Лорд",
             "category": "dog",
             "kind": "Немецкая овчарка",
-            "price": 20000
+            "age": "1 месяц",
+            "price": "20 000"
         },
         {
             "id": 3,
-            "imageUrl": "https://disk.yandex.ru/client/disk?idApp=client&dialog=slider&idDialog=%2Fdisk%2Falmaz.png",
+            "imageUrl": "https://i.postimg.cc/hJBwJdnZ/almaz.png",
             "name": "Алмаз",
             "category": "parrot",
             "kind": "Волнистый попугай",
-            "price": 1800
+            "age": "18 месяцев",
+            "price": "1 800"
+        },
+        {
+            "id": 4,
+            "imageUrl": "https://i.postimg.cc/pLy6k2m5/gosha.png",
+            "name": "Гоша",
+            "category": "parrot",
+            "kind": "Cинелобый амазон",
+            "age": "7 месяцев",
+            "price": "30 000"
+        },
+        {
+            "id": 5,
+            "imageUrl": "https://i.postimg.cc/fbRxnK4V/alakai.png",
+            "name": "Алакай",
+            "category": "dog",
+            "kind": "Cибирский хаски",
+            "age": "23 месяца",
+            "price": "7 500"
         }
     ]
 }

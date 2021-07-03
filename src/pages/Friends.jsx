@@ -27,10 +27,11 @@ const categories = [
 
 function Friends() {
 
-    const state = useSelector(({ filters }) => {
+    const state = useSelector(({ filters, animals }) => {
         return {
             category: filters.category,
-            sortBy: filters.sortBy
+            sortBy: filters.sortBy,
+            animals: animals.items
         }
     })
     const dispatch = useDispatch();
@@ -73,7 +74,9 @@ function Friends() {
                 />
             </div>
 
-            <Animals />
+            <Animals
+                items={state.animals}
+            />
         </section>
     )
 }
