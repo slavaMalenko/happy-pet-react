@@ -1,13 +1,13 @@
 import React from 'react';
-import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 
 import Sort from '../component/friends/Sort';
 import Categories from '../component/friends/Categories';
 import Animals from '../component/friends/Animals';
+import AnimalLoader from '../component/friends/AnimalLoader';
 
 import { setCategory, setSortBy } from '../redux/actions/filters';
-import { addAnimals } from '../redux/actions/animals';
+import { fetchAnimals } from '../redux/actions/animals';
 
 
 
@@ -31,7 +31,8 @@ function Friends() {
         return {
             category: filters.category,
             sortBy: filters.sortBy,
-            animals: animals.items
+            animals: animals.items,
+            isLoader: animals.isLoader
         }
     })
     const dispatch = useDispatch();
@@ -48,13 +49,8 @@ function Friends() {
 
 
     React.useEffect(() => {
-        axios
-            .get('http://localhost:3001/friends')
-            .then(({ data }) => {
-                console.log(data)
-                dispatch(addAnimals(data))
-            })
-    }, [])
+        dispatch(fetchAnimals(state.sortBy, state.category))
+    }, [state.sortBy, state.category])
 
 
 
@@ -73,10 +69,14 @@ function Friends() {
                     onClickItem={onClickItemCategory}
                 />
             </div>
-
-            <Animals
-                items={state.animals}
-            />
+            {
+                state.isLoader
+                    ? Array(4).fill(0).map((item, index) => <AnimalLoader key={index} />)
+                    : <Animals
+                        items={state.animals}
+                        isLoader={state.isLoader}
+                    />
+            }
         </section>
     )
 }

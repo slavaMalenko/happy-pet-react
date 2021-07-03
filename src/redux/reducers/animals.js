@@ -10,6 +10,13 @@ const animals = (state = initialState, action) => {
                 ...state,
                 items: action.payload
             }
+
+        case 'CHANGE_IS_LOADER':
+            return {
+                ...state,
+                isLoader: action.payload
+            }
+
         default:
             return state;
     }
