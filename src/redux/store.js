@@ -1,9 +1,11 @@
 import { createStore, combineReducers, compose, applyMiddleware } from 'redux';
 
 import filters from './reducers/filters';
+import animals from './reducers/animals';
 
 const redusers = combineReducers({
     filters,
+    animals
 })
 
 const store = createStore(

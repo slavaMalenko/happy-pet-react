@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
 
 import Sort from '../component/friends/Sort';
@@ -6,6 +7,9 @@ import Categories from '../component/friends/Categories';
 import Animals from '../component/friends/Animals';
 
 import { setCategory, setSortBy } from '../redux/actions/filters';
+import { addAnimals } from '../redux/actions/animals';
+
+
 
 const sort = [
     { name: "возрасту", value: "age" },
@@ -19,6 +23,8 @@ const categories = [
     { name: "Рыбы", category: "fish" },
 ]
 
+
+
 function Friends() {
 
     const state = useSelector(({ filters }) => {
@@ -27,8 +33,9 @@ function Friends() {
             sortBy: filters.sortBy
         }
     })
-
     const dispatch = useDispatch();
+
+
 
     const onClickItemCategory = React.useCallback(category => {
         dispatch(setCategory(category))
@@ -39,6 +46,14 @@ function Friends() {
     }, [])
 
 
+    React.useEffect(() => {
+        axios
+            .get('http://localhost:3001/friends')
+            .then(({ data }) => {
+                console.log(data)
+                dispatch(addAnimals(data))
+            })
+    }, [])
 
 
 
