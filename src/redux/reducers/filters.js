@@ -1,5 +1,5 @@
 const initialState = {
-    sortBy: 'price',
+    sortBy: 'age',
     category: null,
 }
 
@@ -9,6 +9,12 @@ const filters = (state = initialState, action) => {
             return {
                 ...state,
                 category: action.payload
+            }
+
+        case 'SET_SORT_BY':
+            return {
+                ...state,
+                sortBy: action.payload
             }
 
         default:
