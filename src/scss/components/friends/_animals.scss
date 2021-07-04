@@ -51,7 +51,7 @@
         width: 100%;
         background: #E8E8E8;
         box-shadow: inset 0px -2px 5px rgba(0, 0, 0, 0.25);
-        border-radius: 100px;   
+        border-radius: 100px;  
 
         &::before {
             position: absolute;
@@ -70,11 +70,16 @@
             background: linear-gradient(180deg, #FD4B4B 0%, #FE2E2E 100%);
             border-radius: 105px;
             border: 0;
+            transition: all .2s linear;
 
             font-family: Montserrat, sans-serif;
             line-height: 18px;
             letter-spacing: -0.055em;
             color: $white;
+
+            &:hover {
+                font-size: 15.5px;
+            }
         }
 
         &-value {

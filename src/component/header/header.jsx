@@ -15,7 +15,7 @@ const menuItems = [
     { name: 'Контакты', link: '/contacts' },
 ]
 
-function Header() {
+function Header({ totalPrice }) {
     return (
         <header className="header">
             <div className="container">
@@ -34,7 +34,7 @@ function Header() {
                         <span className="tel__cont">+7 978 884 43-78</span>
                     </a>
 
-                    <BasketButton />
+                    <BasketButton totalPrice={totalPrice} />
                 </div>
             </div>
         </header>
