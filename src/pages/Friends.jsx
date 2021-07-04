@@ -8,6 +8,7 @@ import AnimalLoader from '../component/friends/AnimalLoader';
 
 import { setCategory, setSortBy } from '../redux/actions/filters';
 import { fetchAnimals } from '../redux/actions/animals';
+import { addTotalPrice } from '../redux/actions/cart';
 
 
 
@@ -32,7 +33,7 @@ function Friends() {
             category: filters.category,
             sortBy: filters.sortBy,
             animals: animals.items,
-            isLoader: animals.isLoader
+            isLoader: animals.isLoader,
         }
     })
     const dispatch = useDispatch();
@@ -52,6 +53,10 @@ function Friends() {
         dispatch(fetchAnimals(state.sortBy, state.category))
     }, [state.sortBy, state.category])
 
+
+    const changeCartPrice = (value) => {
+        dispatch(addTotalPrice(value))
+    }
 
 
     return (
@@ -74,7 +79,7 @@ function Friends() {
                     ? Array(4).fill(0).map((item, index) => <AnimalLoader key={index} />)
                     : <Animals
                         items={state.animals}
-                        isLoader={state.isLoader}
+                        changeCartPrice={changeCartPrice}
                     />
             }
         </section>

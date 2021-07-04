@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Animals({ items }) {
+function Animals({ items, changeCartPrice }) {
     return (
         <div className="animals">
 
@@ -17,7 +17,12 @@ function Animals({ items }) {
                             </div>
 
                             <div className="animal__price">
-                                <button className="animal__price-button">Подружиться</button>
+                                <button
+                                    className="animal__price-button"
+                                    onClick={() => changeCartPrice(item.price)}
+                                >
+                                    Подружиться
+                                </button>
                                 <p className="animal__price-value">{item.price} ₽</p>
                             </div>
                         </div>
