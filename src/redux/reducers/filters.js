@@ -11,6 +11,18 @@ const filters = (state = initialState, action) => {
                 category: action.payload
             }
 
+        case 'SET_CATEGORY_DOG':
+            return {
+                ...state,
+                category: 'dog'
+            }
+
+        case 'SET_CATEGORY_BIRD':
+            return {
+                ...state,
+                category: 'bird'
+            }
+
         case 'SET_SORT_BY':
             return {
                 ...state,
