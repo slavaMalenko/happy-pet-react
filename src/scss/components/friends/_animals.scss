@@ -1,14 +1,15 @@
 @import '../../variables';
 
 .friends {
-    background-color: $white;
-    border-radius: 12px;
-    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.151);
+    border-radius: 5px;
+    padding: 10px 25px;
 }
 
 .animals {
     display: flex;
     flex-wrap: wrap;
+    padding-bottom: 20px;
 }
 
 .animal {
@@ -25,7 +26,7 @@
 
     &__img {
         transition: all .1s linear;
-        border-radius: 15px;
+        border-radius: 5px;
         width: 100%;
         margin-bottom: 5px;
     }
@@ -70,19 +71,19 @@
         }
 
         &-button {
-            padding: 10px 22px;
-            background: linear-gradient(180deg, #FD4B4B 0%, #FE2E2E 100%);
+            padding: 8px 18px;
+            background-color: #FE2E2E;
             border-radius: 105px;
             border: 0;
-            transition: all .2s linear;
+            transition: all .1s linear;
 
             font-family: Montserrat, sans-serif;
             line-height: 18px;
-            letter-spacing: -0.055em;
+            font-size: 14px;
             color: $white;
 
             &:hover {
-                font-size: 15.5px;
+                background-color: #ff5050
             }
         }
 
