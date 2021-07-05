@@ -3,8 +3,21 @@ import classNames from 'classnames';
 
 import arrow from '../../assets/img/header/arrow.png';
 
+
+
+
 const Sort = React.memo(({ items, activeItemSort, onClickItem }) => {
+
+    React.useEffect(() => {
+        document.body.addEventListener('click', handleOutsideClick)
+    }, [])
     const sortRef = React.useRef();
+    function handleOutsideClick(event) {
+        const path = event.path || (event.composedPath && event.composedPath())
+        if (!path.includes(sortRef.current)) {
+            initialVisiblePopup();
+        }
+    }
 
     const [visiblePopup, setVisiblePopup] = React.useState(false);
     const changeVisiblePopup = () => {
@@ -14,32 +27,26 @@ const Sort = React.memo(({ items, activeItemSort, onClickItem }) => {
         setVisiblePopup(false);
     }
 
-    React.useEffect(() => {
-        document.body.addEventListener('click', handleOutsideClick)
-    }, [])
-    function handleOutsideClick(event) {
-        const path = event.path || (event.composedPath && event.composedPath())
-        if (!path.includes(sortRef.current)) {
-            initialVisiblePopup();
-        }
-    }
-
     const activeSortLink = items.find(item => item.value === activeItemSort).name;
 
 
     return (
-        <div className="sort" ref={sortRef} >
+        <div className="sort" ref={sortRef}>
             <div className="sort__case">
                 <p
                     onClick={changeVisiblePopup}
                     className="sort__case-text">
-                    <img className={classNames(
-                        "sort__case-img",
-                        { "sort__case-img--rotate": visiblePopup }
-                    )}
+
+                    <img
+                        className={classNames(
+                            "sort__case-img",
+                            { "sort__case-img--rotate": visiblePopup }
+                        )}
                         src={arrow}
                         alt="" />
+
                     Сортировать по:
+
                 </p>
                 <span className="sort__case-link">{activeSortLink}</span>
 
@@ -49,7 +56,7 @@ const Sort = React.memo(({ items, activeItemSort, onClickItem }) => {
                             items.map((item, index) => {
                                 return (
                                     <li
-                                        key={item.value}
+                                        key={`${item}_${index}`}
                                         onClick={() => {
                                             onClickItem(item.value)
                                             initialVisiblePopup()
@@ -57,8 +64,7 @@ const Sort = React.memo(({ items, activeItemSort, onClickItem }) => {
                                         className={classNames(
                                             "sort__list-item",
                                             { "sort__list-item--active": activeItemSort === item.value }
-                                        )}
-                                    >
+                                        )}>
 
                                         {item.name}
 

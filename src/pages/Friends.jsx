@@ -26,6 +26,7 @@ const categories = [
 
 
 
+
 function Friends() {
 
     const state = useSelector(({ filters, animals }) => {
@@ -37,23 +38,17 @@ function Friends() {
         }
     })
     const dispatch = useDispatch();
-
-
-
-    const onClickItemCategory = React.useCallback(category => {
-        dispatch(setCategory(category))
-    }, [])
-
-    const onClickItemSortBy = React.useCallback(sort => {
-        dispatch(setSortBy(sort))
-    }, [])
-
-
     React.useEffect(() => {
         dispatch(fetchAnimals(state.sortBy, state.category))
     }, [state.sortBy, state.category])
 
 
+    const onClickItemCategory = React.useCallback(category => {
+        dispatch(setCategory(category))
+    }, [])
+    const onClickItemSortBy = React.useCallback(sort => {
+        dispatch(setSortBy(sort))
+    }, [])
     const changeCartPrice = (value) => {
         dispatch(addTotalPrice(value))
     }

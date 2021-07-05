@@ -3,6 +3,9 @@ import React from 'react';
 import basket from '../../assets/img/header/basket.png';
 import arrow from '../../assets/img/header/arrow.png';
 
+
+
+
 function BasketButton({ totalPrice }) {
     return (
         <a className="basket" href="#">
