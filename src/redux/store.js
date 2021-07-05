@@ -4,6 +4,7 @@ import thunk from 'redux-thunk';
 import filters from './reducers/filters';
 import animals from './reducers/animals';
 import cart from './reducers/cart';
+import menu from './reducers/menu';
 
 
 
@@ -12,7 +13,8 @@ const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const redusers = combineReducers({
     filters,
     animals,
-    cart
+    cart,
+    menu
 })
 
 const store = createStore(
