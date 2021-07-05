@@ -1,4 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { setMenuActive, setMenuActiveHome } from '../../redux/actions/menu';
 
 import Menu from './menu';
 
@@ -15,19 +19,49 @@ const menuItems = [
     { name: 'Контакты', link: '/contacts' },
 ]
 
+
+
+
 function Header({ totalPrice }) {
+
+    const state = useSelector(({ menu }) => {
+        return {
+            menuActiveItem: menu.activeItem
+        }
+    })
+    const dispatch = useDispatch();
+    React.useEffect(() => {
+        dispatch(setMenuActive(window.location.pathname))
+    }, [window.location.pathname])
+
+
+    const changeActiveItem = (item) => {
+        dispatch(setMenuActive(item))
+    }
+    const changeActiveItemHome = () => {
+        dispatch(setMenuActiveHome())
+    }
+
     return (
         <header className="header">
             <div className="container">
                 <div className="header__content">
-                    <a className="logo" href="/">
+                    <Link
+                        className="logo"
+                        to='/'
+                        onClick={changeActiveItemHome}>
+
                         <div className="logo__img">
                             <img className="logo__img-photo" src={logo} alt="" />
                         </div>
                         <span className="logo__text">HAPPY PET</span>
-                    </a>
 
-                    <Menu items={menuItems} />
+                    </Link>
+
+                    <Menu
+                        items={menuItems}
+                        activeItem={state.menuActiveItem}
+                        changeActiveItem={changeActiveItem} />
 
                     <a className="tel" href="#">
                         <img className="tel__img" src={tel} alt="" />
