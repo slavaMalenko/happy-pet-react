@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { setCategoryBird, setCategoryDog } from '../redux/actions/filters';
+import { setMenuActiveFriends } from '../redux/actions/menu';
 
 import animals from '../assets/img/animals.png';
 import dog from '../assets/img/top/dog.png';
@@ -24,9 +25,14 @@ function BaseHome() {
 
     const changeAnimalsDog = () => {
         dispatch(setCategoryDog())
+        dispatch(setMenuActiveFriends())
     }
     const changeAnimalsParrot = () => {
         dispatch(setCategoryBird())
+        dispatch(setMenuActiveFriends())
+    }
+    const changeMenuActive = () => {
+        dispatch(setMenuActiveFriends())
     }
 
 
@@ -37,7 +43,12 @@ function BaseHome() {
             <div className="description">
                 <h1 className="description__head">Твой новый друг <br /> с доставкой на дом</h1>
                 <p className="description__item">Онлайн-магазин породистых домашних животных подарит тебе нового друга в несколько кликов. Действуй!</p>
-                <Link className="description__button" to="/friends">Посмотреть друзей</Link>
+                <Link
+                    className="description__button"
+                    onClick={changeMenuActive}
+                    to="/friends" >
+                    Посмотреть друзей
+                </Link>
             </div>
 
             <div className="top">
