@@ -35,7 +35,7 @@ function BaseHome() {
 
     return (
         <section className="base">
-            <img className="intro" src={animals} alt="" />
+            <img className="intro" src={animals} alt="Животные" />
 
             <div className="description">
                 <h1 className="description__head">Твой новый друг <br /> с доставкой на дом</h1>
@@ -54,7 +54,7 @@ function BaseHome() {
                             className="top__item-link">
 
                             <span className="top__item-head">Собаки</span>
-                            <img className="top__item-img top__item-img--center" src={dog} alt="" />
+                            <img className="top__item-img top__item-img--center" src={dog} alt="Собаки" />
 
                         </Link>
                     </li>
@@ -66,7 +66,7 @@ function BaseHome() {
                             className="top__item-link">
 
                             <span className="top__item-head top__item-head--arrow">Попугаи</span>
-                            <img className="top__item-img" src={parrot} alt="" />
+                            <img className="top__item-img" src={parrot} alt="Попугаи" />
 
                         </Link>
                     </li>

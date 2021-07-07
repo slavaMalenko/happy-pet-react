@@ -43,7 +43,7 @@ const Sort = React.memo(({ items, activeItemSort, onClickItem }) => {
                             { "sort__case-img--rotate": visiblePopup }
                         )}
                         src={arrow}
-                        alt="" />
+                        alt="Стрелка" />
 
                     Сортировать по:
 

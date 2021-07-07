@@ -10,7 +10,7 @@ function BasketButton({ totalPrice }) {
     return (
         <a className="basket" href="#">
             <div className="basket__link">
-                <img className=" basket__link-img" src={basket} alt="" />
+                <img className=" basket__link-img" src={basket} alt="Корзина" />
             </div>
 
             <div className="basket__list">

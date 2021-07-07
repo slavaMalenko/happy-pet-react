@@ -32,7 +32,8 @@
     }
 
     &:hover &__info-description {
-        transform: scale(1.1);
+        background-color: rgb(255, 255, 255);
+        transform: scale(1.05);
     }
 
     &__img {
@@ -44,20 +45,19 @@
 
     &__info {
         text-align: center;
-        margin-bottom: 10px;
 
         &-name {
             font-size: 28px;
             line-height: 34px;
             letter-spacing: -0.055em;
-            margin-bottom: 5px;
         }
 
         &-description {
             background: $white;
             transition: all .2s linear;
-            font-size: 14px;
-            padding: 10px 15px 5px;
+            line-height: 15px;
+            font-size: 13px;
+            padding: 10px 15px;
         }
     }
 
@@ -87,7 +87,7 @@
         text-align: center;
         width: 100%;
         background: #E8E8E8;
-        box-shadow: inset 0px -2px 5px rgba(0, 0, 0, 0.25);
+        // box-shadow: inset 0px -2px 5px rgba(0, 0, 0, 0.25);
         border-radius: 100px;  
 
         &::before {

@@ -5,10 +5,10 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setMenuActive, setMenuActiveHome } from '../../redux/actions/menu';
 
 import Menu from './menu';
+import BasketButton from './basketButton';
 
 import logo from '../../assets/img/header/logo.png';
 import tel from '../../assets/img/header/tel.png';
-import BasketButton from './basketButton';
 
 
 
@@ -52,7 +52,7 @@ function Header({ totalPrice }) {
                         onClick={changeActiveItemHome}>
 
                         <div className="logo__img">
-                            <img className="logo__img-photo" src={logo} alt="" />
+                            <img className="logo__img-photo" src={logo} alt="Логотип" />
                         </div>
                         <span className="logo__text">HAPPY PET</span>
 
@@ -64,7 +64,7 @@ function Header({ totalPrice }) {
                         changeActiveItem={changeActiveItem} />
 
                     <a className="tel" href="#">
-                        <img className="tel__img" src={tel} alt="" />
+                        <img className="tel__img" src={tel} alt="Телефон" />
                         <span className="tel__cont">+7 978 884 43-78</span>
                     </a>
 
