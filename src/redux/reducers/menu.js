@@ -14,6 +14,11 @@ const menu = (state = initialState, action) => {
                 activeItem: '/'
             }
 
+        case 'SET_MENU_ACTIVE_FRIENDS':
+            return {
+                activeItem: '/friends'
+            }
+
         default:
             return state;
     }
