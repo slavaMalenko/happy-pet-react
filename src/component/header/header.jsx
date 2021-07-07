@@ -32,7 +32,7 @@ function Header({ totalPrice }) {
     const dispatch = useDispatch();
     React.useEffect(() => {
         dispatch(setMenuActive(window.location.pathname))
-    }, [window.location.pathname])
+    }, [])
 
 
     const changeActiveItem = (item) => {
