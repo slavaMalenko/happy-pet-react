@@ -2,7 +2,6 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { fetchAnimals } from '../redux/actions/animals';
 import { setCategoryBird, setCategoryDog } from '../redux/actions/filters';
 
 import animals from '../assets/img/animals.png';
@@ -25,11 +24,9 @@ function BaseHome() {
 
     const changeAnimalsDog = () => {
         dispatch(setCategoryDog())
-        dispatch(fetchAnimals(state.sortBy, state.category))
     }
     const changeAnimalsParrot = () => {
         dispatch(setCategoryBird())
-        dispatch(fetchAnimals(state.sortBy, state.category))
     }
 
 
