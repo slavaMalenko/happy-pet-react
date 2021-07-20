@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom';
 
 import Header from './component/header/header';
 import BaseHome from './pages/BaseHome';
+import Contacts from './pages/Contacts';
 import Friends from './pages/Friends';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <div className="container">
           <Route path="/" exact component={BaseHome} />
           <Route path="/friends" exact component={Friends} />
+          <Route path="/contacts" exact component={Contacts} />
         </div>
       </main>
 
