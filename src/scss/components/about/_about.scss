@@ -1,0 +1,8 @@
+@import '../../variables';
+
+.advantages {
+    &__item {
+        margin-bottom: 10px;
+        list-style-type: decimal;
+    }
+}
