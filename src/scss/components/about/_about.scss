@@ -1,5 +1,37 @@
 @import '../../variables';
 
+.about {
+    margin-top: 30px;
+    background-color: $white;
+    display: flex;
+    justify-content: space-between;
+
+    &__img {
+        width: 50%;
+    }
+
+    &__info {
+        padding: 0 30px;
+        
+        display: flex;
+        flex-direction: column;
+
+        &-title {
+            text-align: center;
+            padding: 40px 0 15px;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        &-description {
+            font-size: 16px;
+            line-height: 18px;
+            padding: 0 10px 20px;
+            margin: auto 0 15px 0;
+        }
+    }
+}
+
 .advantages {
     &__item {
         margin-bottom: 10px;
