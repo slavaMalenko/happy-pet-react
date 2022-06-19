@@ -1,7 +1,5 @@
 @import '../../variables';
 
-
-
 .categories {
     display: flex;
     justify-content: center;
@@ -96,7 +94,7 @@
             display: flex;
             flex-direction: column;
             align-items: flex-end;
-            padding: 8px 15px 8px 30px; 
+            padding: 8px 15px 8px 30px;
             cursor: pointer;
 
             &--active {
@@ -107,5 +105,4 @@
             }
         }
     }
-} 
-
+}

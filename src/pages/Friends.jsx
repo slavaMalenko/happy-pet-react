@@ -8,7 +8,7 @@ import AnimalLoader from '../component/friends/AnimalLoader';
 
 import { setCategory, setSortBy } from '../redux/actions/filters';
 import { fetchAnimals } from '../redux/actions/animals';
-import { addTotalPrice } from '../redux/actions/cart';
+import { setAnimalName, addTotalPrice } from '../redux/actions/cart';
 
 
 
@@ -29,12 +29,13 @@ const categories = [
 
 function Friends() {
 
-    const state = useSelector(({ filters, animals }) => {
+    const state = useSelector(({ filters, animals, cart }) => {
         return {
             category: filters.category,
             sortBy: filters.sortBy,
             animals: animals.items,
             isLoader: animals.isLoader,
+            totalPrice: cart.totalPrice
         }
     })
     const dispatch = useDispatch();
@@ -49,8 +50,11 @@ function Friends() {
     const onClickItemSortBy = React.useCallback(sort => {
         dispatch(setSortBy(sort))
     }, [])
-    const changeCartPrice = (value) => {
-        dispatch(addTotalPrice(value))
+    const changeCartPriceAndAnimalName = (price, name) => {
+        if (state.totalPrice === 0) {
+            dispatch(addTotalPrice(price))
+            dispatch(setAnimalName(name))
+        }
     }
 
 
@@ -74,7 +78,7 @@ function Friends() {
                     ? Array(4).fill(0).map((item, index) => <AnimalLoader key={index} />)
                     : <Animals
                         items={state.animals}
-                        changeCartPrice={changeCartPrice}
+                        changeCartPriceAndAnimalName={changeCartPriceAndAnimalName}
                     />
             }
         </section>

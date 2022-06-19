@@ -9,7 +9,6 @@ import Contacts from './pages/Contacts';
 import Friends from './pages/Friends';
 
 function App() {
-
   const state = useSelector(({ cart }) => {
     return {
       totalPrice: cart.totalPrice
@@ -18,7 +17,6 @@ function App() {
 
   return (
     <div>
-
       <Header totalPrice={state.totalPrice} />
 
       <main className="main">
@@ -29,7 +27,6 @@ function App() {
           <Route path="/contacts" exact component={Contacts} />
         </div>
       </main>
-
     </div>
   );
 }

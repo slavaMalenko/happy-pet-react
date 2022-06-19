@@ -3,7 +3,7 @@ import React from 'react';
 
 
 
-function Animals({ items, changeCartPrice }) {
+function Animals({ items, changeCartPriceAndAnimalName }) {
     return (
         <div className="animals">
 
@@ -33,7 +33,7 @@ function Animals({ items, changeCartPrice }) {
                                     <div className="animal__price">
                                         <button
                                             className="animal__price-button"
-                                            onClick={() => changeCartPrice(item.price)}>
+                                            onClick={() => changeCartPriceAndAnimalName(item.price, item.name)}>
 
                                             Подружиться
 
